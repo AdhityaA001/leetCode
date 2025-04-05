@@ -1,27 +1,17 @@
 package medium;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class LongestSubstringWithoutRepeatingCharacters {
 	
 	public int lengthOfLongestSubstring(String s) {
 
         int maxLength = 0;
-        Set<Character> charSet = new HashSet<>();
-        int left = 0;
+        int lastIndex[] = new int[128];
 
-        for(int right = 0; right < s.length(); right++) {
-            if(!charSet.contains(s.charAt(right))) {
-                charSet.add(s.charAt(right));
-                maxLength = Math.max(maxLength, right - left + 1);
-            } else {
-                while (charSet.contains(s.charAt(right))) {
-                    charSet.remove(s.charAt(left));
-                    left++;
-                }
-                charSet.add(s.charAt(right));
-            }
+        for(int start = 0, end = 0; end < s.length(); end++) {
+            char currentChar = s.charAt(end);
+            start = Math.max(start, lastIndex[currentChar]);
+            maxLength = Math.max(maxLength, end - start + 1);
+            lastIndex[currentChar] = end + 1;
         }
         return maxLength;
     }
