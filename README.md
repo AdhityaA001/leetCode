@@ -19,3 +19,11 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 ## 2. Longest Substring Without Repeating Characters
 
 Given a string s, find the length of the longest substring without duplicate characters.
+
+# Hard:
+
+## 1. Median of Two Sorted Arrays
+
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+
+The overall run time complexity should be O(log (m+n)).
