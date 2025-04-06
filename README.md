@@ -20,6 +20,10 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 Given a string s, find the length of the longest substring without duplicate characters.
 
+## 3. Longest Palindromic Substring
+
+Given a string s, return the longest palindromic substring in s.
+
 # Hard:
 
 ## 1. Median of Two Sorted Arrays
